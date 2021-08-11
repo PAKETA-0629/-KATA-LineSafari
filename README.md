@@ -6,9 +6,9 @@ You simply need to return true/false if you can detect a one and only one "valid
 
 A line can have the following characters :
 
-- = left / right
-| = up / down
-+ = corner
+'-' = left / right
+'|' = up / down
+'+' = corner
 Rules for valid lines
 The most basic kind of valid line is when the end-points are already adjacent
 X
