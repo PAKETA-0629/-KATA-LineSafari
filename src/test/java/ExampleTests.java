@@ -6,6 +6,28 @@ public class ExampleTests {
 
     // "Good" examples from the Kata description.
     @Test
+    public void findXTest() {
+
+        char[][] grid = {
+                {' ', 'X', '-', 'X'}
+        };
+        int[] result = Dinglemouse.findX(grid, true, 'X');
+        System.out.println(result[0] + " " + result[1]);
+
+    }
+    @Test
+    public void checkHorizontalTest() {
+
+        char[][] grid = {
+                {' ', 'X', '-', 'X'}
+        };
+        Dinglemouse.grid = grid;
+        boolean result = Dinglemouse.checkHorizontal(0, 1);
+        System.out.println(result);
+
+
+    }
+    @Test
     public void makeGridTest() {
 
         char[][] expected = {
@@ -25,6 +47,27 @@ public class ExampleTests {
 
     }
 
+
+    @Test
+    public void allGood() {
+        exGood1();
+        exGood2();
+        exGood3();
+        exGood4();
+        exGood5();
+
+    }
+
+
+    @Test
+    public void allBad() {
+        exBad1();
+        exBad2();
+        exBad3();
+        exBad4();
+        exBad5();
+
+    }
     @Test
     public void exGood1() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
