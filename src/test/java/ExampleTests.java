@@ -5,6 +5,25 @@ import static org.junit.Assert.*;
 public class ExampleTests {
 
     // "Good" examples from the Kata description.
+    @Test
+    public void makeGridTest() {
+
+        char[][] expected = {
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {'X', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'X'},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+        };
+        char[][] grid = Preloaded.makeGrid(new String[] {
+                "           ",
+                "X---------X",
+                "           ",
+                "           "
+        });
+        assertArrayEquals(expected, grid);
+        Preloaded.showGrid(grid);
+
+    }
 
     @Test
     public void exGood1() {
