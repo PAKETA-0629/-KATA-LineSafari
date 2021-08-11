@@ -11,6 +11,7 @@ A line can have the following characters :
 '|' = up / down
 
 '+' = corner
+
 Rules for valid lines
 The most basic kind of valid line is when the end-points are already adjacent
 X
