@@ -15,9 +15,6 @@ public class Dinglemouse {
         }
         boolean x1 = start(false);
 
-
-
-
         if (x1 && checkGrid()) return true;
         else {
             grid = Grid;
@@ -100,7 +97,6 @@ public class Dinglemouse {
     }
 
 
-
     public static boolean checkVertical(int x, int y) {
         return checkVertical(x, y, false);
     }
@@ -145,12 +141,15 @@ public class Dinglemouse {
             } else {
                 if (!checkHorizontal(nextX, nextY, false)) return false;
             }
+            if (grid[nextX][nextY] == 'X') {
+                grid[nextX][nextY] = ' ';
+                return true;
+            }
         } else if (grid[nextX][nextY] == '-') {
             if (!checkHorizontal(x, y)) return false;
         } else if (grid[nextX][nextY] == '|') {
             if (!checkVertical(x, y)) return false;
         }
-
 
         return checkNextPosition(nextX, nextY);
 

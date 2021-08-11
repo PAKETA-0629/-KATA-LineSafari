@@ -4,49 +4,6 @@ import static org.junit.Assert.*;
 
 public class ExampleTests {
 
-    // "Good" examples from the Kata description.
-    @Test
-    public void findXTest() {
-
-        char[][] grid = {
-                {' ', 'X', '-', 'X'}
-        };
-        int[] result = Dinglemouse.findX(grid, true, 'X');
-        System.out.println(result[0] + " " + result[1]);
-
-    }
-    @Test
-    public void checkHorizontalTest() {
-
-        char[][] grid = {
-                {' ', 'X', '-', 'X'}
-        };
-        Dinglemouse.grid = grid;
-        boolean result = Dinglemouse.checkHorizontal(0, 1);
-        System.out.println(result);
-
-
-    }
-    @Test
-    public void makeGridTest() {
-
-        char[][] expected = {
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-                {'X', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'X'},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
-        };
-        char[][] grid = Preloaded.makeGrid(new String[] {
-                "           ",
-                "X---------X",
-                "           ",
-                "           "
-        });
-        assertArrayEquals(expected, grid);
-        Preloaded.showGrid(grid);
-
-    }
-
 
     @Test
     public void allGood() {
@@ -68,6 +25,8 @@ public class ExampleTests {
         exBad5();
 
     }
+
+
     @Test
     public void exGood1() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
@@ -79,6 +38,7 @@ public class ExampleTests {
         Preloaded.showGrid(grid);
         assertTrue(Dinglemouse.line(grid));
     }
+
 
     @Test
     public void exGood2() {
@@ -92,6 +52,7 @@ public class ExampleTests {
         Preloaded.showGrid(grid);
         assertTrue(Dinglemouse.line(grid));
     }
+
 
     @Test
     public void exGood3() {
@@ -107,6 +68,7 @@ public class ExampleTests {
         assertTrue(Dinglemouse.line(grid));
     }
 
+
     @Test
     public void exGood4() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
@@ -120,6 +82,7 @@ public class ExampleTests {
         assertTrue(Dinglemouse.line(grid));
     }
 
+
     @Test
     public void exGood5() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
@@ -132,7 +95,6 @@ public class ExampleTests {
         assertTrue(Dinglemouse.line(grid));
     }
 
-    // "Bad" examples from the Kata description.
 
     @Test
     public void exBad1() {
@@ -142,6 +104,7 @@ public class ExampleTests {
         Preloaded.showGrid(grid);
         assertFalse(Dinglemouse.line(grid));
     }
+
 
     @Test
     public void exBad2() {
@@ -155,6 +118,7 @@ public class ExampleTests {
         assertFalse(Dinglemouse.line(grid));
     }
 
+
     @Test
     public void exBad3() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
@@ -166,6 +130,7 @@ public class ExampleTests {
         Preloaded.showGrid(grid);
         assertFalse(Dinglemouse.line(grid));
     }
+
 
     @Test
     public void exBad4() {
@@ -180,6 +145,7 @@ public class ExampleTests {
         assertFalse(Dinglemouse.line(grid));
     }
 
+
     @Test
     public void exBad5() {
         final char[][] grid = Preloaded.makeGrid(new String[] {
@@ -192,5 +158,4 @@ public class ExampleTests {
         Preloaded.showGrid(grid);
         assertFalse(Dinglemouse.line(grid));
     }
-
 }
