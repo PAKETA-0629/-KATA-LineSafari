@@ -1,4 +1,5 @@
 # LineSafari
+https://www.codewars.com/kata/59c5d0b0a25c8c99ca000237/java
 Kata Task
 You are given a grid, which always includes exactly two end-points indicated by X
 
@@ -24,52 +25,7 @@ It must be possible to follow the line with no ambiguity (lookahead of just one 
 The line may take any path between the two points.
 Sometimes a line may be valid in one direction but not the other. Such a line is still considered valid.
 Every line "character" found in the grid must be part of the line. If extras are found then the line is not valid.
-Examples
-Good lines
 
-X---------X
-
-X
-|
-|
-X
-
-   +--------+
-X--+        +--+
-               |
-               X
-               
-   +-------------+
-   |             |
-X--+      X------+    
-
-   +-------+
-   |      +++---+
-X--+      +-+   X
-
-Bad lines
-
-X-----|----X
-
-X
-|
-+
-X
-
-   |--------+
-X---        ---+
-               |
-               X
-               
-   +------ 
-   |              
-X--+      X  
-
-      +------+
-      |      |
-X-----+------+
-      |
-      X
       
 Hint
 Imagine yourself walking a path where you can only see your very next step. Can you know which step you must take, or not?
